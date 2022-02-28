@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Enquiry Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css">
+    
+</head>
+<body>
+  <header class="text-center text-3xl text-st font-bold py-10">Sample Form</header>
+  <div class="flex w-full items-center flex justify-center items-center py-12 px-6 text-black ">
+    <div>
+        <div class="max-w-xs h-66 flex flex-col justify-between bg-white dark:bg-gray-800 rounded-lg border border-gray-400 mb-6 py-5 px-4 shadow-xl shadow-slate-500">
+            <div>
+  <label class="block">
+    <span class="text-white">Name</span>
+    <input class="form-input mt-1 block w-50 " placeholder="Jane Doe">
+  </label>
+  
+  <div class="mt-4">
+    <span class="text-white">Account Type</span>
+    <div class="mt-2">
+      <label class="inline-flex items-center">
+        <input type="radio" class="form-radio text-green-500" name="accountType" value="personal">
+        <span class="ml-2 text-white">Personal</span>
+      </label>
+      <label class="inline-flex items-center ml-6">
+        <input type="radio" class="form-radio text-purple-500" name="accountType" value="busines">
+        <span class="ml-2 text-white">Business</span>
+      </label>
+    </div>
+  </div>
+  
+  <label class="block mt-4">
+    <span class="text-white">Requested Limit</span>
+    <select class="form-select mt-1 block w-60">
+      <option>$1,000</option>
+      <option>$5,000</option>
+      <option>$10,000</option>
+      <option>$25,000</option>
+    </select>
+  </label>
+  
+  <div class="flex mt-6 text-white">
+    <label class="flex items-center">
+      <input type="checkbox" class="text-orange-500 form-checkbox">
+      <span class="ml-2">I agree to the <span class="underline">privacy policy</span></span>
+    </label>
+  </div>
+</div></div></div></div>
+  <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+</body>
+</html>

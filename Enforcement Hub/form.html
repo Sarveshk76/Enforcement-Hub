@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css">
+</head>
+<body>
+  <div class="bg-teal-600 container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="relative left-10 flex py-3 title-font font-medium items-center text-white mb-4 md:mb-0">
+      <img class="h-10 w-10 bg-white rounded-full" src="Enforcement-hub-logo.png" alt="Workflow">
+      <span class="ml-3 text-xl">Enforcement Hub</span>
+    </a>
+    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center text-white">
+      <a class="inline-flex items-center bg-teal-600 border-0 py-1 px-3 focus:outline-none hover:bg-teal-900 rounded text-base mt-4 md:mt-0" href="index.html">Home</a>
+      <a class="inline-flex items-center bg-teal-900 border-0 py-1 px-3 focus:outline-none hover:bg-teal-900 rounded text-base mt-4 md:mt-0" href="form.html">Case Request Form</a>
+      <a class="inline-flex items-center bg-teal-600 border-0 py-1 px-3 focus:outline-none hover:bg-teal-900 rounded text-base mt-4 md:mt-0" href="#">Blog</a>
+      <a class="inline-flex items-center bg-teal-600 border-0 py-1 px-3 focus:outline-none hover:bg-teal-900 rounded text-base mt-4 md:mt-0" href="#">Contact Us</a>
+      <a class="inline-flex items-center bg-teal-600 border-0 py-1 px-3 focus:outline-none hover:bg-teal-900 rounded text-base mt-4 md:mt-0" href="login.html">Log in</a>
+    </nav>
+
+    
+  </div>
+  
+          <div class="-mr-2 flex md:hidden">
+            <!-- Mobile menu button -->
+            <button type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <!--
+                Heroicon name: outline/menu
+  
+                Menu open: "hidden", Menu closed: "block"
+              -->
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <!--
+                Heroicon name: outline/x
+  
+                Menu open: "block", Menu closed: "hidden"
+              -->
+              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      
+
+  
+    <header class="bg-white shadow">
+      <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-2xl font-bold text-gray-900">
+Case Enquiry Form</h1>
+
+
+
+</div>
+</header>
+<main>
+<div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8  mb-100">
+  <!-- Replace with your content -->
+  <div class=" px-4 py-6 sm:px-0">
+    <div class="border-4 border-dashed border-gray-200 rounded-lg h-full">
+
+      
+        <div class=" w-full justify-center items-center text-left py-12 px-6 text-black ">
+            <div>
+                <div class="w-full h-66 flex flex-col  bg-teal-600 rounded-lg border border-gray-400 mb-6 py-5 px-4 shadow-xl shadow-slate-500">
+                    <div>
+                        <label class="block">
+                            <span class="text-white">Requestor's Name:</span>
+                            <input type="text" class="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "  name="name" id="name" />
+                        </label>
+                        <label class="block">
+                            <span class="text-white">Requestor's Email:</span>
+                            <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  " placeholder="name@email.com">
+                        </label>
+                        <label class="block">
+                            <span class="text-white">Requestor's Mobile No.:</span>
+                            <input type="tel" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " name="phone" id="phone" />
+                        </label>
+                        <label class="block">
+                            <span class="text-white">Case Title:</span> 
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "  name="title" id="title" />
+                        </label>
+                        <label class="block">
+                            <span class="text-white">Date of incident:</span>
+                            <input  type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" name="date" id="date" />
+                        </label>
+                        <label class="block">
+                            <span class="text-white">Case Description:</span>
+                            <textarea class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " name="description" id="description" cols="30" rows="10"></textarea>
+                        </label>
+                        <label class="flex items-center text-white">
+                            <input type="checkbox" class="text-orange-500 form-checkbox">
+                            <span class="ml-2">I agree to the <span class="underline">privacy policy</span></span>
+                        </label>
+                        <button class="mx-2 my-2 bg-teal-900 transition duration-150 ease-in-out hover:bg-indigo-900 rounded text-white px-6 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-600"> 
+                        <input  type="submit" value="Submit" />
+                        </button>
+        <br/>
+        </div></div></div></div>
+    
+    </div>
+    </div>
+
+    </div>
+  </div>
+  <footer class="bg-teal-800 text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <img class="h-10 w-10 bg-white rounded-full" src="Enforcement-hub-logo.png" alt="Workflow">
+        <span class="ml-3 text-xl">Enforcement Hub</span>
+      </a>
+      <p class="text-sm text-white sm:ml-4 sm:pl-4  sm:py-2 sm:mt-0 mt-4">© 2022 Enforcement Hub - All Rights Reserved</p>
+      
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-white">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-white">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-white">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-white">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
+  <!-- /End replace -->
+</div>
+</main>
+</div>
+<script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+
+</body>
+</html>

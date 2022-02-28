@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css">
+</head>
+<style>
+  #journal-scroll::-webkit-scrollbar {
+      width: 6px;
+      cursor: pointer;
+  }
+
+  #journal-scroll::-webkit-scrollbar-track {
+      background-color: rgba(229, 231, 235, var(--bg-opacity));
+      cursor: pointer;
+  }
+
+  #journal-scroll::-webkit-scrollbar-thumb {
+      cursor: pointer;
+      background-color: #a0aec0;
+  }
+</style>
+<body>
+  <div class="min-h-full">
+    <nav class="bg-teal-600">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <img class="h-10 w-10 bg-white rounded-full" src="Enforcement-hub-logo.png" alt="Workflow"></div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="dashboard.html" class="text-white hover:bg-teal-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
+  
+                <a href="conversation.html" class="bg-teal-800 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Conversation</a>
+  
+                <a href="reports.html" class="text-white hover:bg-teal-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reports</a>
+              </div>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-4 flex items-center md:ml-6">
+              <button type="button" class="bg-teal-600 p-1 rounded-full text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                <span class="sr-only">View notifications</span>
+                <!-- Heroicon name: outline/bell -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+              </button>
+  
+              <!-- Profile dropdown -->
+              <div class="ml-3 relative">
+                <div>
+                  <button type="button" data-dropdown-toggle="dropdown" class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="dropdownButton" aria-expanded="false" aria-haspopup="true">
+                    <span class="sr-only">Open user menu</span>
+                    <div class="text-lg bg-white rounded-full w-8 h-8"><i class="mdi mdi-account"></i></div>
+                  </button>
+                </div>
+  
+                <div id="dropdown" class="hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                    <ul class="py-1" aria-labelledby="dropdownButton">
+                      <li>
+                        <a href="dashboard.html" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+                      </li>
+                      <li>
+                        <a href="conversation.html" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+                      </li>
+                     
+                      <li>
+                        <a href="reports.html" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="-mr-2 flex md:hidden">
+            <!-- Mobile menu button -->
+            <button type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <!--
+                Heroicon name: outline/menu
+  
+                Menu open: "hidden", Menu closed: "block"
+              -->
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <!--
+                Heroicon name: outline/x
+  
+                Menu open: "block", Menu closed: "hidden"
+              -->
+              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="md:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="dashboard.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Dashboard</a>
+  
+          <a href="conversation.html" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Conversation</a>
+  
+          <a href="reports.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Reports</a>
+        </div>
+        <div class="pt-4 pb-3 border-t border-gray-700">
+          
+          <div class="mt-3 px-2 space-y-1">
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Your Profile</a>
+  
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Settings</a>
+  
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Sign out</a>
+          </div>
+              </div>
+
+                  
+      </div>
+      
+    </nav>
+  
+    <header class="bg-white shadow">
+      <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-2xl font-bold text-gray-900">
+          Conversation
+        </h1>
+      </div>
+    </header>
+    <main>
+      <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8  mb-100">
+      
+        <div class=" px-4 py-6 sm:px-0 ">
+          <div class="border-4 border-dashed border-gray-200  rounded-lg h-full">
+
+            <div class="md:block rounded-lg h-96 bg-gray-300">
+              <div class="flex justify-center items-center h-96 rounded-xl">
+                  <div class="w-50% h-full shadow-2xl">
+                      
+                      <div class="overflow-auto px-1 py-1 bg-white rounded-lg" style="height: 19rem;" id="journal-scroll">
+                          <div class="flex items-center pr-10 h-20">  <span class=" flex ml-1 h-10 items-center bg-teal-700 text-white text-xs font-normal rounded-lg px-1 p-1 " style="font-size: 10px;">Hi Dr.Hendrikson, I haven't been feeling well for past few days. <span class="text-gray-400 pl-1" style="font-size: 8px;">01:25am</span></span> </div>
+                          <div class="flex justify-end pt-2 pl-10"> <span class="bg-teal-700 h-10 items-center text-white text-sm font-normal rounded-lg px-1 p-1  flex justify-end " style="font-size: 10px;">Lets jump on a video call. <span class="text-gray-200 pl-1" style="font-size: 8px;">02.30am</span></span> </div>
+                          
+                          
+                      </div>
+                      <div class="flex items-center pl-5 bg-white rounded-lg">
+                          <div class="relative">  <input type="text" class="rounded-full pl-16 pr-12 py-5 focus:outline-none h-auto placeholder-black bg-gray-500 text-white " style="font-size: 15px;width: 550px;" placeholder="Type a message..." id="typemsg"> <i class="mdi mdi-paperclip absolute right-20 top-5 transform -rotate-45 text-black"></i> <i class="mdi mdi-camera absolute right-5 top-5 text-black"></i> </div>
+                          <div class=" w-20 h-10 rounded-full bg-blue-300 text-center items-center flex justify-center hover:bg-gray-900 hover:text-white"><i class="mdi mdi-microphone "></i> </div>
+                          <div class=" w-20 h-10 rounded-full bg-blue-300 text-center items-center flex justify-center"> <button class="w-20 h-10 rounded-full text-center items-center flex justify-center focus:outline-none hover:bg-gray-900 hover:text-white" onclick="sendbtn();"><i class="mdi mdi-send "></i></button> </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          
+          </div>
+          </div>
+
+          </div>
+        </div>
+        <!-- /End replace -->
+      </div>
+    </main>
+  </div>
+
+  <footer class="bg-teal-800 text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <img class="h-10 w-10 bg-white rounded-full" src="Enforcement-hub-logo.png" alt="Workflow">
+        <span class="ml-3 text-xl">Enforcement Hub</span>
+      </a>
+      <p class="text-sm text-white sm:ml-4 sm:pl-4  sm:py-2 sm:mt-0 mt-4">© 2022 Enforcement Hub - All Rights Reserved</p>
+      
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-white">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-white">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-white">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-white">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+  <script>
+  function sendbtn() {
+
+    var printtext = document.getElementById('chatmsg');
+    var copytext = document.getElementById('typemsg');
+    var currentdate = new Date();
+    
+    var copiedtext = copytext.value;
+    
+    var printnow = '<div class="flex justify-end pt-2 pl-10">'+'<span class="bg-green-900 h-10 items-center text-gray-200 text-xs font-normal rounded-lg px-1 p-1 items-end flex justify-end " style="font-size: 10px;">'+copiedtext+'<span class="text-gray-400 pl-1" style="font-size: 8px;">'+currentdate.getHours()+':'+currentdate.getMinutes()+'</span>'+'</span>'+'</div>';
+    
+    printtext.insertAdjacentHTML('beforeend', printnow);
+    
+    var box = document.getElementById('journal-scroll');
+    box.scrollTop = box.scrollHeight;
+    
+    }
+  </script>
+</body>
+</html>

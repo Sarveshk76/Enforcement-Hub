@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css">
+</head>
+<body>
+  <div class="min-h-full">
+    <nav class="bg-teal-600">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <img class="h-10 w-10 bg-white rounded-full" src="Enforcement-hub-logo.png" alt="Workflow"></div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="dashboard.html" class="bg-teal-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
+  
+                <a href="conversation.html" class="text-white hover:bg-teal-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Conversation</a>
+  
+               <a href="reports.html" class="text-white hover:bg-teal-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reports</a>
+              </div>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-4 flex items-center md:ml-6">
+              <button type="button" class="bg-teal-600 p-1 rounded-full text-white hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                <span class="sr-only">View notifications</span>
+                <!-- Heroicon name: outline/bell -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+              </button>
+  
+              <!-- Profile dropdown -->
+              <div class="ml-3 relative">
+                <div>
+                  <button type="button" data-dropdown-toggle="dropdown" class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="dropdownButton" aria-expanded="false" aria-haspopup="true">
+                    <span class="sr-only">Open user menu</span>
+                    <div class="text-lg bg-white rounded-full w-8 h-8"><i class="mdi mdi-account"></i></div>
+                  </button>
+                </div>
+  
+                <div id="dropdown" class="hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                    <ul class="py-1" aria-labelledby="dropdownButton">
+                      <li>
+                        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
+                      </li>
+                      <li>
+                        <a href="index.html" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+  
+    
+      
+    </nav>
+  
+    <header class="bg-white shadow">
+      <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-2xl font-bold text-gray-900">
+          Dashboard
+        </h1>
+      </div>
+    </header>
+    <main>
+      <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8  mb-100">
+        <!-- Replace with your content -->
+        <div class=" px-4 py-6 sm:px-0">
+          <div class="border-4 border-dashed border-gray-200 rounded-lg h-full">
+
+            
+            <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- ====== Services Section Start -->
+<div class="text-center mx-auto mb-12 lg:mb-20 max-w-[1010px]">
+  <span class="font-semibold text-lg text-primary mb-2 block">
+   Case Scenario
+  </span>
+  <h2 class="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4">
+   The Wrong Race Investigation
+  </h2>
+  <p class="text-base text-body-color">
+   In a serial killer case that lasted for nearly two years, police had received countless tips and several eyewitness accounts. Eyewitnesses can be your best friend in some cases and your worst enemy in others. The following case illustrates the pitfalls of trusting eyewitness accounts over scientific evidence.
+  </p>
+</div>
+<section class="pt-20 lg:pt-[20px] pb-12 lg:pb-[90px]">
+   <div class="container">
+    <div class="text-center mx-auto mb-12 lg:mb-20 max-w-[1010px]">
+      
+      <h5 class="font-bold text-3xl sm:text-4xl md:text-[20px] text-dark mb-4">
+       The case : 
+      </h5>
+      <p class="text-base text-body-color">
+        <div class="text-center mx-auto mb-12 lg:mb-20 max-w-[1010px]">
+          <p class="text-base text-body-color">
+            The perpetrator’s DNA linked him to six homicides within a fairly well defined area. His DNA profile could not be found in the national DNA database of registered offenders and eyewitness reports lead investigators to believe that he was most likely to be a Caucasian male. This belief lead to the subsequent collection and analysis of hundreds of DNA samples from men in the area who fit the description.
+          </p>
+        </div>
+      </p>
+    </div>
+    <h5 class="font-bold text-3xl sm:text-4xl md:text-[20px] text-dark mb-4">
+      Checklist : 
+     </h5>
+      <div class="flex flex-wrap -mx-4">
+         <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div
+               class="
+               p-10
+               md:px-7
+               xl:px-10
+               rounded-[20px]
+               bg-gray-400
+               shadow-md
+               hover:shadow-lg
+               mb-8
+               "
+               >
+               <div
+                  class="
+                  w-[50px]
+                  h-[50px]
+                  flex
+                  items-center
+                  justify-center
+                  bg-black
+                  rounded-2xl
+                  mb-10
+                  "
+                  >
+                  <input type="checkbox" class="appearance-none text-lg checked:bg-green-500" checked  /> 
+               </div>
+               <h4 class="font-semibold text-xl text-dark mb-3">
+                Sketches released to the media.
+               </h4>
+               <p class="text-body-color">
+                  
+               </p>
+            </div>
+         </div>
+         <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div
+               class="
+               p-10
+               md:px-7
+               xl:px-10
+               rounded-[20px]
+               bg-gray-400
+               shadow-md
+               hover:shadow-lg
+               mb-8
+               "
+               >
+               <div
+                  class="
+                  w-[50px]
+                  h-[50px]
+                  flex
+                  items-center
+                  justify-center
+                  bg-black
+                  rounded-2xl
+                  mb-8
+                  "
+                  >
+                  <input type="checkbox" class="appearance-none  checked:bg-green-500" /> 
+               </div>
+               <h4 class="font-semibold text-xl text-dark mb-3">
+                Cold Case Files
+               </h4>
+               <p class="text-body-color">
+                 
+               </p>
+            </div>
+         </div>
+         
+      </div>
+   </div>
+</section>
+<!-- ====== Services Section End -->
+          
+          </div>
+          </div>
+
+          </div>
+        </div>
+        <!-- /End replace -->
+      </div>
+    </main>
+  </div>
+
+  <footer class="bg-teal-800 text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <img class="h-10 w-10 bg-white rounded-full" src="Enforcement-hub-logo.png" alt="Workflow">
+        <span class="ml-3 text-xl">Enforcement Hub</span>
+      </a>
+      <p class="text-sm text-white sm:ml-4 sm:pl-4  sm:py-2 sm:mt-0 mt-4">© 2022 Enforcement Hub - All Rights Reserved</p>
+      
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-white">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-white">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-white">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-white">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+  
+</body>
+</html>

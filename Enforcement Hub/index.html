@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js"></script>
+    <script src="tailwind.config.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script>
+    var cont=0;
+function loopSlider(){
+  var xx= setInterval(function(){
+        switch(cont)
+        {
+        case 0:{
+            $("#slider-1").fadeOut(400);
+            $("#slider-2").delay(400).fadeIn(400);
+            $("#sButton1").removeClass("bg-purple-800");
+            $("#sButton2").addClass("bg-purple-800");
+        cont=1;
+        
+        break;
+        }
+        case 1:
+        {
+        
+            $("#slider-2").fadeOut(400);
+            $("#slider-1").delay(400).fadeIn(400);
+            $("#sButton2").removeClass("bg-purple-800");
+            $("#sButton1").addClass("bg-purple-800");
+           
+        cont=0;
+        
+        break;
+        }
+        
+        
+        }},8000);
+
+}
+
+function reinitLoop(time){
+clearInterval(xx);
+setTimeout(loopSlider(),time);
+}
+
+
+
+function sliderButton1(){
+
+    $("#slider-2").fadeOut(400);
+    $("#slider-1").delay(400).fadeIn(400);
+    $("#sButton2").removeClass("bg-purple-800");
+    $("#sButton1").addClass("bg-purple-800");
+    reinitLoop(4000);
+    cont=0
+    
+    }
+    
+    function sliderButton2(){
+    $("#slider-1").fadeOut(400);
+    $("#slider-2").delay(400).fadeIn(400);
+    $("#sButton1").removeClass("bg-purple-800");
+    $("#sButton2").addClass("bg-purple-800");
+    reinitLoop(4000);
+    cont=1
+    }
+    $(window).ready(function(){
+        $("#slider-2").hide();
+        $("#sButton1").addClass("bg-purple-800");
+        
+        loopSlider();
+    
+    });
+  </script>
+</head>
+<body>
+    <header class=" text-gray-100 body-font mx-auto">
+        <div class="bg-teal-600 container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="relative left-10 flex py-3 title-font font-medium items-center text-white mb-4 md:mb-0">
+            <img class="h-10 w-10 bg-white rounded-full" src="Enforcement-hub-logo.png" alt="Workflow">
+            <span class="ml-3 text-xl">Enforcement Hub</span>
+          </a>
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            <a class="inline-flex items-center bg-teal-600 border-0 py-1 px-3 focus:outline-none hover:bg-teal-900 rounded text-base mt-4 md:mt-0" href="index.html">Home</a>
+            <a class="inline-flex items-center bg-teal-600 border-0 py-1 px-3 focus:outline-none hover:bg-teal-900 rounded text-base mt-4 md:mt-0" href="form.html">Case Request Form</a>
+            <a class="inline-flex items-center bg-teal-600 border-0 py-1 px-3 focus:outline-none hover:bg-teal-900 rounded text-base mt-4 md:mt-0" href="#">Blog</a>
+            <a class="inline-flex items-center bg-teal-600 border-0 py-1 px-3 focus:outline-none hover:bg-teal-900 rounded text-base mt-4 md:mt-0" href="#">Contact Us</a>
+            <a class="inline-flex items-center bg-teal-600 border-0 py-1 px-3 focus:outline-none hover:bg-teal-900 rounded text-base mt-4 md:mt-0" href="login.html">Log in</a>
+          </nav>
+
+          <a class="relative right-10 inline-flex items-center bg-teal-600 border-0 py-1 px-3 focus:outline-none hover:bg-teal-800 rounded text-base mt-4 md:mt-0" href='login.html'>Join Us
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <section class="text-gray-600 body-font">
+            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+              <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="title-font sm:text-5xl text-3xl mb-4 font-medium text-gray-900">The <span class="text-teal-600 ">crowdsourced initiative</span> 
+                  <br class="hidden lg:inline-block">to help Indian Enforcement Agencies.
+                </h1>
+                <p class="mb-8 leading-relaxed sm:text-3xl text-teal-800">Enforcement Hub is a nonprofit organization whose mission is to accelerate the investigation against crimes using public help.</p>
+              </div>
+              <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 place-items-center relative">
+                <img class="object-cover object-center rounded absolute left-10" alt="hero" height="500px" width="400px"src="books.jpg">
+                <img class="object-cover object-center rounded  " src="1.svg"  alt="">
+              </div>
+            </div>
+          </section>
+      </header>
+
+      <div class="container mt-5 ">
+        <div
+          class="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-blue-50"
+        >
+          <!-- left -->
+          <div class="flex flex-row-reverse md:contents">
+            <div
+              class="bg-teal-700 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md"
+            >
+              <h3 class="font-semibold text-lg text-center mb-1">Recieves the problem statement</h3>
+              
+            </div>
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-teal-800 pointer-events-none"></div>
+              </div>
+              <div
+                class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-teal-700 shadow"
+              ></div>
+            </div>
+          </div>
+          <!-- right -->
+          <div class="flex md:contents">
+            <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-teal-700 pointer-events-none"></div>
+              </div>
+              <div
+                class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-teal-700 shadow"
+              ></div>
+            </div>
+            <div
+              class="bg-teal-700 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md"
+            >
+              <h3 class="font-semibold text-lg mb-1">Analyze the problem</h3>
+              
+            </div>
+          </div>
+          <!-- left -->
+          <div class="flex flex-row-reverse md:contents">
+            <div
+              class="bg-teal-700 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md"
+            >
+              <h3 class="font-semibold text-lg mb-1">Members work on problem</h3>
+              
+            </div>
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-teal-700 pointer-events-none"></div>
+              </div>
+              <div
+                class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-teal-700 shadow"
+              ></div>
+            </div>
+          </div>
+          <!-- left -->
+          <div class="flex flex-row-reverse md:contents">
+            <div
+              class="bg-teal-700 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md"
+            >
+              <h3 class="font-semibold text-lg mb-1">Shares the solution with Enforcement agencies</h3>
+              
+            </div>
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-teal-700 pointer-events-none"></div>
+              </div>
+              <div
+                class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-teal-700 shadow"
+              ></div>
+            </div>
+          </div>
+          <!-- right -->
+          <div class="flex md:contents">
+            <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-teal-700 pointer-events-none"></div>
+              </div>
+              <div
+                class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-teal-700 shadow"
+              ></div>
+            </div>
+            <div
+              class="bg-teal-700 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+              <h3 class="font-semibold text-lg mb-1">Recieves feedback against the solution.</h3>
+              <p class="leading-tight text-justify">
+               
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <section class="mt-10 body-font  relative">
+        <div class="container px-8 py-20 mx-auto">
+          <div class="flex flex-wrap m-4">
+            <div class="p-1 md:w-1/3">
+              <div class="h-full bg-teal-600 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <h2 class="text-5xl p-5 text-center text-white ">Total Cases Solved</h2>
+                <div class="p-6">
+                  <h2 class="text-8xl p-5 text-white text-center">100+</h2>
+                  </div>
+                </div>
+              </div>
+            
+            <div class="p-1 md:w-1/3">
+              <div class="h-full bg-teal-600 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <h2 class="text-5xl p-5 text-center text-white">Ongoing Cases</h2>
+                <div class="p-6">
+                  <br><br>
+                  <h2 class="text-8xl p-5 text-center text-white ">100+</h2>
+                </div>
+              </div>
+            </div>
+            <div class="p- md:w-1/3">
+              <div class="h-full bg-teal-600 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <h2 class="text-5xl p-5 text-center text-white">Members</h2><br><br>
+                <div class="p-6">
+                  <h2 class="text-8xl p-5 text-center text-white ">100+</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="sliderAx h-auto mt-5">
+        <div id="slider-1" class="container mx-auto">
+          <div class=" h-full p-20 text-center rounded-full bg-teal-600 shadow">
+            <div class="mb-5">
+              
+              <p class="px-4 p-20 text-2xl text-center text-white ">
+                <span class="text-3xl  text-left leading-tight h-3">“</span>
+                I sometimes wish that people would put a little more emphasis upon the observance of the law than they do upon its enforcement
+                <span class="text-3xl  text-right leading-tight h-3 -mt-3">”</span>
+                <div class="text-4xl text-center text-white p-10">– Calvin Coolidge</div>
+              </p>
+              
+            </div>
+          </div><!-- container -->
+        <br>
+        </div>
+  
+        <div id="slider-2" class="container mx-auto">
+          <div class=" h-full p-15 text-center rounded-full bg-teal-600  shadow">
+            <div class=" mb-5">
+              
+              <p class="px-4 p-20 text-2xl text-center text-white ">
+                <span class="text-3xl  text-left leading-tight h-3">“</span>
+                Go to college. Get an education. Understand the law, the profession and our constitution so you understand your responsibility to the people and the trust you are granted – and to stay true to it.
+                <span class="text-3xl  text-right leading-tight h-3 -mt-3">”</span>
+                <div class="text-4xl text-center text-white p-10">- Sheriff Dave Brown</div>
+              </p>
+              
+            </div>
+          </div> <!-- container -->
+        <br>
+        </div>
+      </div>
+   <div  class=" flex justify-between w-12 mx-auto pb-2">
+          <button id="sButton1" onclick="sliderButton1()" class="bg-purple-400 rounded-full w-4 pb-2 " ></button>
+      <button id="sButton2" onclick="sliderButton2() " class="bg-purple-400 rounded-full w-4 p-2"></button>
+    </div>
+
+
+      <footer class="bg-teal-800 text-gray-600 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+            <img class="h-10 w-10 bg-white rounded-full" src="Enforcement-hub-logo.png" alt="Workflow">
+            <span class="ml-3 text-xl">Enforcement Hub</span>
+          </a>
+          <p class="text-sm text-white sm:ml-4 sm:pl-4  sm:py-2 sm:mt-0 mt-4">© 2022 Enforcement Hub - All Rights Reserved</p>
+          
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a class="text-white">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-white">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-white">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-white">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </footer>
+
+
+    
+    <div class="fixed bottom-0 right-0 flex flex-col items-end ml-6 w-full">
+        <div class="chat-modal show  mr-5 flex flex-col mb-5 shadow-lg sm:w-1/2 md:w-1/3 lg:w-1/4">
+          <!-- close button -->
+          <div class="close-chat bg-red-500 hover:bg-red-600 text-white mb-1 w-10 flex justify-center items-center px-2 py-1 rounded self-end cursor-pointer">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+              <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+            </svg>
+          </div>
+          <iframe src='https://webchat.botframework.com/embed/chatbot76-bot?s=Eq7kq39aDDI.BDCBMXe8rcm7RG1G-cfFUl8OV5TCxiSkpLoi9HOO0lA'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
+        </div>
+      </div>
+    
+      <script>
+        const chatModal = document.querySelector('.chat-modal');
+        const chatServices = document.querySelector('.chat-services');
+    
+        const showChat = document.querySelector('.show-chat');
+        const closeChat = document.querySelector('.close-chat');
+        
+        showChat.addEventListener('click', function (){
+          chatModal.classList.add('show')
+          showChat.classList.add('hidden')
+          setTimeout(() => {
+            chatServices.classList.add('expand')
+          }, 500);
+        });
+        closeChat.addEventListener('click',function () {
+          setTimeout(() => {
+            showChat.classList.remove('hidden')
+          }, 820);
+          chatServices.classList.remove('expand')
+          setTimeout(() => {
+          chatModal.classList.remove('show')
+          }, 500);
+        });
+      </script>
+</body>
+</html>
